@@ -1,0 +1,4 @@
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !^awokenwell.com$
+RewriteRule ^(.*)$ https://awokenwell.com/$1 [R=301,L]
+

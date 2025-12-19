@@ -1,0 +1,236 @@
+#logo-container {
+    position: relative;
+    display: block;
+    height: 30em;
+    width: 100%;
+}
+
+#logo-container>div {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #a2a081;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.well-logo {
+    background-image: url(../img/well-wide.png);
+}
+
+h1 {
+    font-size: 3em;
+    color: #633616;
+    font-weight: bold;
+    position: relative;
+    text-align: center;
+}
+
+h1::before {
+    background-color: #e0d7c5;
+    width: 8em;
+    height: 1.4em;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    content: "";
+    z-index: -1;
+    margin-left: -4em;
+    transform: rotateZ(2deg);
+    margin-top: -0.1em;
+}
+
+main {
+    width: 30em;
+    max-width: 90%;
+    margin: 0 auto;
+}
+
+main p {
+    line-height: 1.5em;
+    font-size: 1.2em;
+    text-align: justify;
+}
+
+.rumble {
+    animation-name: rumble;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    display: inline-block;
+}
+
+.well {
+    color: #633616;
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+}
+
+.well::before {
+    background-color: #e0d7c5;
+    width: 2.1em;
+    height: 1.4em;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    content: "";
+    z-index: -1;
+    margin-left: -1em;
+    transform: rotateZ(-2deg);
+    margin-top: -0.1em;
+}
+
+.blueprint {
+    margin: 4em 0;
+    background-image: url(../img/tp-machine.png);
+    background-size: contain;
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-color: #3f8bec;
+    width: 30em;
+    height: 18em;
+    outline: #3f8bec 2px solid;
+    border: rgba(0, 0, 0, 0.5) 2px solid;
+    transform: rotate(-5deg);
+}
+
+.blueprint h6 {
+    opacity: 0.8;
+    text-align: right;
+    margin: 1em;
+    color: white;
+    font-family: monospace;
+    font-weight: normal;
+    text-decoration: underline;
+    font-size: 1em;
+}
+
+.blueprint .specs {
+    opacity: 0.8;
+    width: 13em;
+    font-size: 0.5em;
+    border: 1px solid white;
+    color: white;
+    padding: 0 0.5em;
+    position: absolute;
+    bottom: 2em;
+    right: 2em;
+    font-family: monospace;
+}
+
+footer {
+    border-top: #633616 2px solid;
+    text-align: center;
+    font-size: 0.8em;
+    margin: 2em auto;
+    padding-top: 1em;
+    width: 50em;
+    max-width: 100%;
+}
+
+.profile {
+    background: rgba(0, 0, 0, 0.1);
+    font-size: 0.9em;
+    padding: 1em;
+}
+
+#profile-photo {
+    box-shadow: -1px 1px 5px black;
+    border: 0.5em solid white;
+    transform: rotate(2deg);
+    margin: 0 1em 0 0.5em;
+    float: left;
+    width: 8em;
+}
+
+#contact-button {
+    width: 7em;
+    height: 1.5em;
+    line-height: 1.5em;
+    font-size: 2em;
+    background-color: rgb(197, 127, 113);
+    color: white;
+    text-align: center;
+    margin: 1em auto;
+    text-decoration: none;
+}
+
+a {
+    color: #633616;
+}
+
+@media only screen and (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    main {
+        overflow: hidden;
+    }
+
+    .blueprint {
+        margin: 2em 1em;
+        width: 19em;
+        height: 10em;
+    }
+}
+
+@keyframes rumble {
+    0% {
+        transform: translate(0, 0);
+    }
+
+    75% {
+        transform: translate(2px, 1px);
+    }
+
+    77% {
+        transform: translate(-1px, 0);
+    }
+
+    79% {
+        transform: translate(1px, 2px);
+    }
+
+    81% {
+        transform: translate(0, 0);
+    }
+
+    83% {
+        transform: translate(3px, -1px);
+    }
+
+    85% {
+        transform: translate(2px, 1px);
+    }
+
+    87% {
+        transform: translate(-1px, 0);
+    }
+
+    89% {
+        transform: translate(1px, 2px);
+    }
+
+    91% {
+        transform: translate(0, 0);
+    }
+
+    93% {
+        transform: translate(3px, -1px);
+    }
+
+    95% {
+        transform: translate(0, 0);
+    }
+}
