@@ -1,8 +1,11 @@
 #logo-container {
     position: relative;
     display: block;
-    height: 30em;
+    height: auto;
     width: 100%;
+    aspect-ratio: 1900 / 728;
+    background-color: #cfe4f1;
+    overflow: hidden;
 }
 
 #logo-container>div {
@@ -15,6 +18,19 @@
     position: absolute;
     left: 0;
     top: 0;
+    z-index: 1;
+}
+
+#logo-container::after {
+    content: "";
+    position: absolute;
+    left: -10%;
+    bottom: -15%;
+    width: 160%;
+    height: 70%;
+    background: #a2a081;
+    transform: rotate(-8deg);
+    z-index: 0;
 }
 
 body {
@@ -25,7 +41,12 @@ body {
 }
 
 .well-logo {
-    background-image: url(../img/well-wide.png);
+    background-image: url(../img/well-color-transparent.png);
+}
+
+#logo-container .well-logo {
+    background-size: clamp(140px, 30vw, 420px) auto;
+    background-position: center 68%;
 }
 
 h1 {
@@ -51,7 +72,7 @@ h1::before {
 }
 
 main {
-    width: 30em;
+    width: 35em;
     max-width: 90%;
     margin: 0 auto;
 }
@@ -91,7 +112,7 @@ main p {
 }
 
 .blueprint {
-    margin: 4em 0;
+    margin: 4em 2em;
     background-image: url(../img/tp-machine.png);
     background-size: contain;
     background-position: left center;
@@ -232,5 +253,11 @@ a {
 
     95% {
         transform: translate(0, 0);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .rumble {
+        animation: none;
     }
 }
